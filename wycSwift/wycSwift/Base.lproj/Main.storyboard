@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wycSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,62 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUw-Ea-vCK">
+                                <rect key="frame" x="0.0" y="162" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.47058823529999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="One">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="firstBtnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1P-oo-8r8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xn-gb-BTS">
+                                <rect key="frame" x="200" y="162" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.47058823529999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Two">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="secondBtnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ldZ-Td-Qsd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WN4-JN-bkq">
+                                <rect key="frame" x="400" y="162" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.47058823529999999" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Three">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="thirdBtnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="goI-R0-JCE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WN4-JN-bkq" firstAttribute="width" secondItem="qUw-Ea-vCK" secondAttribute="width" id="9lf-kl-G8o"/>
+                            <constraint firstItem="3xn-gb-BTS" firstAttribute="top" secondItem="qUw-Ea-vCK" secondAttribute="top" id="DQO-k8-pya"/>
+                            <constraint firstItem="3xn-gb-BTS" firstAttribute="leading" secondItem="qUw-Ea-vCK" secondAttribute="trailing" id="FcU-3A-FQb"/>
+                            <constraint firstItem="WN4-JN-bkq" firstAttribute="leading" secondItem="3xn-gb-BTS" secondAttribute="trailing" id="MYb-zj-Yu4"/>
+                            <constraint firstAttribute="trailing" secondItem="WN4-JN-bkq" secondAttribute="trailing" id="Yhz-6z-xYu"/>
+                            <constraint firstItem="3xn-gb-BTS" firstAttribute="width" secondItem="qUw-Ea-vCK" secondAttribute="width" id="fg4-Ef-XWg"/>
+                            <constraint firstItem="WN4-JN-bkq" firstAttribute="top" secondItem="3xn-gb-BTS" secondAttribute="top" id="g6S-WK-jlV"/>
+                            <constraint firstItem="3xn-gb-BTS" firstAttribute="leading" secondItem="qUw-Ea-vCK" secondAttribute="trailing" id="ifb-qb-Qik"/>
+                            <constraint firstItem="WN4-JN-bkq" firstAttribute="leading" secondItem="3xn-gb-BTS" secondAttribute="trailing" id="jhc-bY-SxZ"/>
+                            <constraint firstItem="qUw-Ea-vCK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="142" id="kIx-wi-vPq"/>
+                            <constraint firstItem="qUw-Ea-vCK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rF2-jI-bGF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="firstbtn" destination="qUw-Ea-vCK" id="mj4-2V-osh"/>
+                        <outlet property="secondBtn" destination="3xn-gb-BTS" id="MTA-6z-ubs"/>
+                        <outlet property="thirdBtn" destination="WN4-JN-bkq" id="iKP-dF-s1V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="368" y="447"/>
         </scene>
     </scenes>
 </document>
